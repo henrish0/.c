@@ -1,0 +1,25 @@
+#include <conio.h>
+#include <math.h>
+#include <locale.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+// srand(time(NULL)); for (int n = 0; n < 10; n ++){printf("%d ", rand() % 100 +1);}
+
+/*strcpy(): copia uma string em outra
+strcat(): adiciona o conteudo de uma string em outra
+strcmp(): compara duas strings (-1 <, 0 = , 1 >) case sensitive
+strcasecmp(): compara duas strings (-1 <, 0 = , 1 >) sem case sensitive
+strlwr(): converte conteudo para minusculas
+strupr(): converte conteudo para maiusculas
+strcmp(): compara duas strings (-1 <, 0 = , 1 >)
+atof(): converte cadeia de caracteres para um valor real
+atoi(): converte cadeia de caracteres para um valor inteiro
+sprintf(): converte a cadeia de saida em uma string*/
+
+
+/*icon.rc MAINICON ICON "name.ico"*/
+
