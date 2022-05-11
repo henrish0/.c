@@ -168,6 +168,7 @@ void ex10()
         if (s != '=')
         {
             printf("\n\n Minha tentativa: %.0f\n", t);
+again:
             printf("\n Meu numero e igual(=), maior(>) ou menor(<) ao que foi escolhido?: ");
             scanf(" %c", &s);
             if (s == '=')
@@ -181,6 +182,9 @@ void ex10()
             {
                 max = t;
                 t = rand() % (max - min - 1) + min + 1;
+            else
+            {
+                goto again;
             }
         }
     printf("\n Fim de jogo\n");
