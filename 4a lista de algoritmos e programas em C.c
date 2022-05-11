@@ -118,7 +118,7 @@ void ex5()
                 tof = true;
                 j = vet[i];
             }
-        if (tof == false)
+        if (tof == true)
             primo++;
         tof = false;
     }
