@@ -10,9 +10,9 @@ main()
 {
     char exc;
     srand(time(NULL));
-    printf("\n Lista não oficial de Arquivos sequenciais em C\n");
+    printf("\n 5a lista de Arquivos sequenciais em C\n");
 exec:
-    printf(" Digite um exercio [a, b, c, d, e]: ");
+    printf(" Digite um exercio [a, b, c, d, e, f]: ");
     scanf(" %c", &exc);
     printf("\n");
     fflush(stdin);
@@ -33,12 +33,15 @@ exec:
     case 'e':
         ex5();
         break;
+    case 'f':
+        ex6();
+        break;
     default:
         printf(" Opcao invalida,");
         exc = 0;
         goto exec;
     }
-    printf(" Codigo executado\n");
+    printf("\n Codigo executado\n");
     fclose(arquivo);
     fclose(arquivomatriz);
     fclose(pares);
@@ -117,7 +120,7 @@ void ex4()
 void ex5()
 {
     bool tof = true;
-    int termo, primes = 0;
+    int termo, k = 0;
     double valor, vet[64];
     if (((arquivo = fopen("arquivo.txt", "r")) == NULL) || ((primos = fopen("primos.txt", "a")) == NULL))
         printf(" Erro de abertura! \n");
@@ -134,12 +137,33 @@ void ex5()
                 }
             if (tof == true)
             {
-                vet[primes] = valor;
-                primes++;
+                vet[k] = valor;
+                k++;
                 fprintf(primos, "%i = %.0lf, ", termo, valor);
             }
             tof = true;
         }
         fprintf(primos, "\n");
     }
+}
+
+void ex6()
+{
+    char cpf[11];
+    int valido = 1;
+    printf(" Digite um cpf: ");
+    gets(cpf);
+    for (int i = 0; i < 11; i++)
+        if (cpf[i] < '0' || cpf[i] > '9')
+            valido = 0;
+    if (cpf[0] == cpf[1] && cpf[1] == cpf[2] &&
+        cpf[2] == cpf[3] && cpf[3] == cpf[4] &&
+        cpf[4] == cpf[5] && cpf[5] == cpf[6] &&
+        cpf[6] == cpf[7] && cpf[7] == cpf[8] &&
+        cpf[8] == cpf[9] && cpf[9] == cpf[10])
+        valido = 0;
+    if (valido == 0)
+        printf("\n Cpf invalido");
+    else
+        printf("\n Cpf valido");
 }
