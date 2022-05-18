@@ -10,7 +10,7 @@ main()
 {
     char exc;
     srand(time(NULL));
-    printf("\n 5a lista de Arquivos sequenciais em C\n");
+    printf("\n Lista não oficial de Arquivos sequenciais em C\n");
 exec:
     printf(" Digite um exercio [a, b, c, d, e]: ");
     scanf(" %c", &exc);
