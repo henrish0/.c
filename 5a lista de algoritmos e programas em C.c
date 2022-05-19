@@ -13,18 +13,12 @@ main()
 }
 int detectaPrimo(int p)
 {
-    int tof = 1;
+    if (p < 2)
+        return 0;
     for (int i = 2; i <= p / 2; ++i)
         if (p % i == 0)
-        {
-            tof = 0;
-            i = p;
-        }
-    if (p == 4) // para maior otimizacao, a funcao "for" para em i<p/2, desse modo e necessario adicionar uma condicao especifica para p=4
-        tof = 1;
-    if (p < 2)
-        tof = 0;
-    return tof;
+            return 0;
+    return 1;
 }
 int fibo(int p, int v[100])
 {
@@ -52,19 +46,16 @@ int fibo(int p, int v[100])
 }
 int detectaFibonacci(int p)
 {
-    int cnd = 0, t = 0, u = 1, s;
+    int t = 0, u = 1, s;
     for (int i = 0; i < 46; i++) // apos 46, s se torna maior do que o valor limite para int
     {
         s = t + u;
         t = u;
         u = s;
         if (s == p)
-        {
-            cnd = 1;
-            i = 46;
-        }
+            return 1;
     }
-    return cnd;
+    return 0;
 }
 void matrizPrimo(int m[4][4])
 {
@@ -109,11 +100,11 @@ int mmc(int m[4][4])
 }
 int mdc2(int n, int n1)
 {
-    int gcd;
+    int gcd2;
     for (int i = 1; i <= n && i <= n1; i++)
         if (n % i == 0 && n1 % i == 0)
-            gcd = i;
-    return gcd;
+            gcd2 = i;
+    return gcd2;
 }
 int determinante3(int m[3][3])
 {
