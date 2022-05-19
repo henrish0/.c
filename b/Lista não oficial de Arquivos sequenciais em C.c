@@ -33,9 +33,6 @@ exec:
     case 'e':
         ex5();
         break;
-    case 'f':
-        ex6();
-        break;
     default:
         printf(" Opcao invalida,");
         exc = 0;
@@ -145,25 +142,4 @@ void ex5()
         }
         fprintf(primos, "\n");
     }
-}
-
-void ex6()
-{
-    char cpf[11];
-    int valido = 1;
-    printf(" Digite um cpf: ");
-    gets(cpf);
-    for (int i = 0; i < 11; i++)
-        if (cpf[i] < '0' || cpf[i] > '9')
-            valido = 0;
-    if (cpf[0] == cpf[1] && cpf[1] == cpf[2] &&
-        cpf[2] == cpf[3] && cpf[3] == cpf[4] &&
-        cpf[4] == cpf[5] && cpf[5] == cpf[6] &&
-        cpf[6] == cpf[7] && cpf[7] == cpf[8] &&
-        cpf[8] == cpf[9] && cpf[9] == cpf[10])
-        valido = 0;
-    if (valido == 0)
-        printf("\n Cpf invalido");
-    else
-        printf("\n Cpf valido");
 }
