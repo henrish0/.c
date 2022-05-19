@@ -53,7 +53,7 @@ int fibo(int p, int v[100])
 int detectaFibonacci(int p)
 {
     int cnd = 0, t = 0, u = 1, s;
-    for (int i = 0; i < 46; i++) // apos 46, s se torna maior do que o value limite para int
+    for (int i = 0; i < 46; i++) // apos 46, s se torna maior do que o valor limite para int
     {
         s = t + u;
         t = u;
@@ -139,7 +139,7 @@ int agenda(FILE *f, int a[100])
 }
 int validaCPF(int cpf[11])
 {
-    int sum = 0, r1, r2, d1, d2, value;
+    int sum = 0, r1, r2, d1, d2, v;
     for (int i = 0; i < 11; i++)
         if (cpf[i] < 0 || cpf[i] > 9)
             return 0;
@@ -159,8 +159,8 @@ int validaCPF(int cpf[11])
     sum = 0;
     for (int i = 0; i < 10; i++)
         sum = sum + cpf[i] * (11 - i);
-    value = (sum / 11) * 11;
-    r2 = sum - value;
+    v = (sum / 11) * 11;
+    r2 = sum - v;
     if (r2 == 0 || r2 == 1)
         d2 = 0;
     else
