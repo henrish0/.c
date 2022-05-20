@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-FILE *diary;
+
 main()
 {
     printf("\n 5a lista de algoritmos e programas em C\n");
@@ -124,9 +124,37 @@ void multiMatriz(int a[2][3], int b[3][2], int c[2][2])
         sum = 0;
     }
 }
-int agenda(FILE *f, int a[100])
+// tudo parte da proxima funcao
+FILE *diary;
+struct sEndereco
 {
-    // enunciado incompreensivel
+    char rua[100];
+    char numero[10];
+    char complemento[10];
+    char bairro[50];
+    char cidade[50];
+    char estado[3];
+    char cep[10];
+};
+typedef struct sEndereco tEndereco;
+struct sContato
+{
+    char nome[50];
+    char telefone[12];
+    char email[100];
+    tEndereco endereco;
+};
+typedef struct sContato tContato;
+int agenda(FILE *f, tContato a[100])
+{
+    int i;
+    if ((diary = fopen("diary.txt", "r")) == NULL)
+        return 0;
+    else
+        for (i = 0; strcmp(a[i].nome, "EOF") == 0; i++)
+            fscanf(diary, "Nome: %[^\n], Telefone: %[^\n], Email: %[^\n],  Rua: %[^\n],  Numero: %[^\n],  Complemento: %[^\n],  Bairro: %[^\n],  Cidade: %[^\n],  Estado: %[^\n],  Cep: %[^\n]\n", &a[i].nome, &a[i].telefone, &a[i].email, &a[i].endereco.rua, &a[i].endereco.numero, &a[i].endereco.complemento, &a[i].endereco.bairro, &a[i].endereco.cidade, &a[i].endereco.estado, &a[i].endereco.cep);
+    fclose(diary);
+    return i;
 }
 int validaCPF(int cpf[11])
 {
