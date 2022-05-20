@@ -1,16 +1,4 @@
-#include <math.h>
-#include <locale.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-
-main()
-{
-    printf("\n 5a lista de algoritmos e programas em C\n");
-    fclose(diary);
-}
+// 5a lista de algoritmos e programas em C
 int detectaPrimo(int p)
 {
     if (p < 2)
@@ -125,7 +113,6 @@ void multiMatriz(int a[2][3], int b[3][2], int c[2][2])
     }
 }
 // tudo parte da proxima funcao
-FILE *diary;
 struct sEndereco
 {
     char rua[100];
@@ -148,12 +135,11 @@ typedef struct sContato tContato;
 int agenda(FILE *f, tContato a[100])
 {
     int i;
-    if ((diary = fopen("diary.txt", "r")) == NULL)
+    if ((f = fopen("f.txt", "r")) == NULL)
         return 0;
     else
         for (i = 0; strcmp(a[i].nome, "EOF") == 0; i++)
-            fscanf(diary, "Nome: %[^\n], Telefone: %[^\n], Email: %[^\n],  Rua: %[^\n],  Numero: %[^\n],  Complemento: %[^\n],  Bairro: %[^\n],  Cidade: %[^\n],  Estado: %[^\n],  Cep: %[^\n]\n", &a[i].nome, &a[i].telefone, &a[i].email, &a[i].endereco.rua, &a[i].endereco.numero, &a[i].endereco.complemento, &a[i].endereco.bairro, &a[i].endereco.cidade, &a[i].endereco.estado, &a[i].endereco.cep);
-    fclose(diary);
+            fscanf(f, "Nome: %[^\n], Telefone: %[^\n], Email: %[^\n],  Rua: %[^\n],  Numero: %[^\n],  Complemento: %[^\n],  Bairro: %[^\n],  Cidade: %[^\n],  Estado: %[^\n],  Cep: %[^\n]\n", &a[i].nome, &a[i].telefone, &a[i].email, &a[i].endereco.rua, &a[i].endereco.numero, &a[i].endereco.complemento, &a[i].endereco.bairro, &a[i].endereco.cidade, &a[i].endereco.estado, &a[i].endereco.cep);
     return i;
 }
 int validaCPF(int cpf[11])
