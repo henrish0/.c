@@ -113,7 +113,7 @@ int determinante3(int m[3][3])
         det = det + (m[0][i] * (m[1][(i + 1) % 3] * m[2][(i + 2) % 3] - m[1][(i + 2) % 3] * m[2][(i + 1) % 3]));
     return det;
 }
-void multiMatriz(int a[2][3], int b[3][2] int c[2][2])
+void multiMatriz(int a[2][3], int b[3][2], int c[2][2])
 {
     int sum = 0;
     for (int i = 0; i < 4; i++)
