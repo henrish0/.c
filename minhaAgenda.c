@@ -13,7 +13,6 @@ struct sEndereco
     char cidade[50];
     char estado[3];
     char cep[15];
-
 };
 
 typedef struct sEndereco tEndereco;
@@ -380,8 +379,7 @@ void salvaDadosDoArquivo()
 // funcao principal - entry point de execução do programa
 int main()
 {
-    carregaDadosDoArquivo();
-/*
+    //carregaDadosDoArquivo();
         // simula uma carga atraves da inicialização do vetor
             tAmigo a ;
             agenda[0] = inicializaAmigo("Joao Luiz","31-99990-1231","Joaoluiz@gmail","rua da luz","692","casa","Santa Lucia","Belo Horizonte","MG","30.110-111");
@@ -392,7 +390,6 @@ int main()
             agenda[4] = inicializaAmigo("Daise","31-99990-1235","Joaoluiz@gmail","rua da luz","692","casa","Santa Lucia","Belo Horizonte","MG","30.110-115");
             agenda[5] = inicializaAmigo("Henrique","31-99999-6666","henrique@hot","rua da felicidade","1000","apto 101","bla","blu","mg","12345-123");
             strcpy(agenda[6].nome,"EOF");
-*/
     int opcao = 0;
 
     while (opcao != 9)
