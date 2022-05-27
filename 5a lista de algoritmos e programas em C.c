@@ -143,7 +143,7 @@ int agenda(FILE *f, tContato a[100])
         return 0;
     else
         for (i = 0; strcmp(a[i].nome, "EOF") == 0; i++)
-            fscanf(f, "Nome: %[^\n], Telefone: %[^\n], Email: %[^\n],  Rua: %[^\n],  Numero: %[^\n],  Complemento: %[^\n],  Bairro: %[^\n],  Cidade: %[^\n],  Estado: %[^\n],  Cep: %[^\n]\n", &a[i].nome, &a[i].telefone, &a[i].email, &a[i].endereco.rua, &a[i].endereco.numero, &a[i].endereco.complemento, &a[i].endereco.bairro, &a[i].endereco.cidade, &a[i].endereco.estado, &a[i].endereco.cep);
+            fscanf(f, "--Nome %s\n--Telefone %s\n--Email %s\n--Rua %s\n--Numero %s\n--Complemento %s\n--Bairro %s\n--Cidade %s\n--Estado %s\n--Cep %s\nfim contato \n", &a[i].nome, &a[i].telefone, &a[i].email, &a[i].endereco.rua, &a[i].endereco.numero, &a[i].endereco.complemento, &a[i].endereco.bairro, &a[i].endereco.cidade, &a[i].endereco.estado, &a[i].endereco.cep);
     return i;
 }
 int validaCPF(int cpf[11])
