@@ -135,7 +135,7 @@ typedef struct sContato tContato;
 int agenda(FILE *f, tContato a[100])
 {
     int i;
-    if ((f = fopen("f.txt", "r")) == NULL)
+    if ((f = fopen("f.txt", "r")) == '\0')
         return 0;
     else
         for (i = 0; strcmp(a[i].nome, "EOF") == 0; i++)
