@@ -132,6 +132,9 @@ struct sContato
     tEndereco endereco;
 };
 typedef struct sContato tContato;
+typedef struct {
+   unsigned char  _file;
+} FILE;
 int agenda(FILE *f, tContato a[100])
 {
     int i;
