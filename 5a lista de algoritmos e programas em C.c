@@ -152,11 +152,8 @@ int validaCPF(int cpf[11])
     for (int i = 0; i < 11; i++)
         if (cpf[i] < 0 || cpf[i] > 9)
             return 0;
-    if (cpf[0] == cpf[1] && cpf[1] == cpf[2] &&
-        cpf[2] == cpf[3] && cpf[3] == cpf[4] &&
-        cpf[4] == cpf[5] && cpf[5] == cpf[6] &&
-        cpf[6] == cpf[7] && cpf[7] == cpf[8] &&
-        cpf[8] == cpf[9] && cpf[9] == cpf[10])
+    if (cpf[0] == cpf[1] && cpf[1] == cpf[2] && cpf[2] == cpf[3] && cpf[3] == cpf[4] && cpf[4] == cpf[5] &&
+        cpf[5] == cpf[6] && cpf[6] == cpf[7] && cpf[7] == cpf[8] && cpf[8] == cpf[9] && cpf[9] == cpf[10])
         return 0;
     for (int i = 0; i < 9; i++)
         sum = sum + cpf[i] * (10 - i);
