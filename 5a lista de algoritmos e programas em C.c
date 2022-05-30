@@ -52,7 +52,7 @@ void matrizPrimo(int m[4][4])
 }
 int mdc(int m[4][4])
 {
-    int vet[100], k = 0, i, gcd = 0;
+    int i, gcd = 0;
     for (i = 0; i < 16; i++)
         for (int j = 1; j <= m[i / 4][i % 4]; j++)
             if (m[0][0] % j == 0 && m[0][1] % j == 0 && m[0][2] % j == 0 && m[0][3] % j == 0 &&
