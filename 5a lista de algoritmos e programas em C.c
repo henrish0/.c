@@ -134,11 +134,11 @@ typedef struct sContato tContato;
 int agenda(FILE *f, tContato a[100])
 {
     int i;
-    if ((f = fopen("f.txt", "r")) == NULL)
+    if ((f = fopen("f.txt", "r")) == '\0')
         return 0;
     else
         for (i = 0; strcmp(a[i].nome, "EOF") == 0; i++)
-            fscanf(f, "Nome: %[^\n], Telefone: %[^\n], Email: %[^\n],  Rua: %[^\n],  Numero: %[^\n],  Complemento: %[^\n],  Bairro: %[^\n],  Cidade: %[^\n],  Estado: %[^\n],  Cep: %[^\n]\n", &a[i].nome, &a[i].telefone, &a[i].email, &a[i].endereco.rua, &a[i].endereco.numero, &a[i].endereco.complemento, &a[i].endereco.bairro, &a[i].endereco.cidade, &a[i].endereco.estado, &a[i].endereco.cep);
+            fscanf(f, "--Nome %s\n--Telefone %s\n--Email %s\n--Rua %s\n--Numero %s\n--Complemento %s\n--Bairro %s\n--Cidade %s\n--Estado %s\n--Cep %s\nfim contato \n", &a[i].nome, &a[i].telefone, &a[i].email, &a[i].endereco.rua, &a[i].endereco.numero, &a[i].endereco.complemento, &a[i].endereco.bairro, &a[i].endereco.cidade, &a[i].endereco.estado, &a[i].endereco.cep);
     return i;
 }
 int validaCPF(int cpf[11])
@@ -147,11 +147,8 @@ int validaCPF(int cpf[11])
     for (int i = 0; i < 11; i++)
         if (cpf[i] < 0 || cpf[i] > 9)
             return 0;
-    if (cpf[0] == cpf[1] && cpf[1] == cpf[2] &&
-        cpf[2] == cpf[3] && cpf[3] == cpf[4] &&
-        cpf[4] == cpf[5] && cpf[5] == cpf[6] &&
-        cpf[6] == cpf[7] && cpf[7] == cpf[8] &&
-        cpf[8] == cpf[9] && cpf[9] == cpf[10])
+    if (cpf[0] == cpf[1] && cpf[1] == cpf[2] && cpf[2] == cpf[3] && cpf[3] == cpf[4] && cpf[4] == cpf[5] &&
+        cpf[5] == cpf[6] && cpf[6] == cpf[7] && cpf[7] == cpf[8] && cpf[8] == cpf[9] && cpf[9] == cpf[10])
         return 0;
     for (int i = 0; i < 9; i++)
         sum = sum + cpf[i] * (10 - i);

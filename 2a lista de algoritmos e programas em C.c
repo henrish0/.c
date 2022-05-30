@@ -55,7 +55,7 @@ exec:
 void ex1()
 {
     int n;
-    printf(" Insira um numero");
+    printf(" Insira um numero: ");
     scanf("%d", &n);
     if (n % 2 == 1)
         printf(" Numero impar");
@@ -66,13 +66,13 @@ void ex2()
 {
     char name[20];
     float a1, a2, a3;
-    printf(" Digite um nome; ");
+    printf(" Digite um nome: ");
     scanf("%s", &name);
-    printf(" Digite a primeira nota; ");
+    printf(" Digite a primeira nota: ");
     scanf("%s", &a1);
-    printf(" Digite a segunda nota; ");
+    printf(" Digite a segunda nota: ");
     scanf("%s", &a2);
-    printf(" Digite a terceira nota; ");
+    printf(" Digite a terceira nota: ");
     scanf("%s", &a3);
     if ((a1 + a2 + a3) / 3 >= 6)
         printf(" O aluno %s foi aprovado", name);
