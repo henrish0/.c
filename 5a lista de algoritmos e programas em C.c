@@ -30,6 +30,7 @@ int fibo(int p, int v[100])
         else
             return n1;
     }
+    return n1;
 }
 int detectaFibonacci(int p)
 {
