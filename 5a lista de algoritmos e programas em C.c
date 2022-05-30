@@ -28,9 +28,8 @@ int fibo(int p, int v[100])
             n1++;
         }
         else
-            i = 100;
+            return n1;
     }
-    return n1;
 }
 int detectaFibonacci(int p)
 {
