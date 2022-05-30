@@ -11,7 +11,7 @@ int detectaPrimo(int p)
 int fibo(int p, int v[100])
 {
     int a = 0, b = 1, s = 0, n = 0;
-    for (int i = 0; i < 100 && s <= p; i++)
+    for (int i = 0; i < 46 && s <= p; i++) // apos 46, s se torna maior do que o valor limite para int
     {
         v[i] = s;
         n++;
