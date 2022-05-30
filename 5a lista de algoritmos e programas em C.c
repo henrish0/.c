@@ -10,26 +10,21 @@ int detectaPrimo(int p)
 }
 int fibo(int p, int v[100])
 {
-    if (p == 0)
-        return 1;
-    if (p < 0)
-        return 0;
-    int t = 0, u = 1, s, n1 = 2;
+    int a = 0, b = 1, s = 0, n = 0;
     for (int i = 0; i < 100; i++)
     {
-        s = t + u;
-        t = u;
-        u = s;
-        v[i] = 0;
         if (s <= p)
         {
             v[i] = s;
-            n1++;
+            n++;
+            printf("\n%i", v[i]);
         }
         else
-            return n1;
+            return n;
+        a = b;
+        b = s;
+        s = b + a;
     }
-    return n1;
 }
 int detectaFibonacci(int p)
 {
