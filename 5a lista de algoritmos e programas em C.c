@@ -36,20 +36,18 @@ int detectaFibonacci(int p)
 }
 void matrizPrimo(int m[4][4])
 {
-    for (int i = 0; i < 16; i++)
-        m[i / 4][i % 4] = 0;
-    int ar = 0, prime = 1;
-    for (int i = 2; i <= 53; i++)
+    int primo = 1, k = 0;
+    for (int i = 2; i < 48; i++)
     {
-        for (int j = 2; j <= i / 2; j++)
+        for (int j = 2; j < i / 2; j++)
             if (i % j == 0)
-                prime = 0;
-        if (prime == 1)
+                primo = 0;
+        if (primo == 1)
         {
-            m[ar / 4][ar % 4] = i;
-            ar++;
+            m[k / 4][k % 4] = i;
+            k++;
         }
-        prime = 1;
+        primo = 1;
     }
 }
 int mdc(int m[4][4])
