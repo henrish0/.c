@@ -14,8 +14,7 @@ int fibo(int p, int v[100])
         return 1;
     if (p < 0)
         return 0;
-    double t = 0, u = 1, s;
-    int n1 = 2;
+    int t = 0, u = 1, s, n1 = 2;
     for (int i = 0; i < 100; i++)
     {
         s = t + u;
