@@ -10,6 +10,10 @@ int detectaPrimo(int p)
 }
 int fibo(int p, int v[100])
 {
+    if (p == 0)
+        return 1;
+    if (p < 0)
+        return 0;
     double t = 0, u = 1, s;
     int n1 = 2;
     for (int i = 0; i < 100; i++)
@@ -26,10 +30,6 @@ int fibo(int p, int v[100])
         else
             i = 100;
     }
-    if (p == 0)
-        n1 = 1;
-    if (p < 0)
-        n1 = 0;
     return n1;
 }
 int detectaFibonacci(int p)
