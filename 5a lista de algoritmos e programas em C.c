@@ -11,28 +11,24 @@ int detectaPrimo(int p)
 int fibo(int p, int v[100])
 {
     int a = 0, b = 1, s = 0, n = 0;
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < 100 && s <= p; i++)
     {
-        if (s <= p)
-        {
-            v[i] = s;
-            n++;
-        }
-        else
-            return n;
+        v[i] = s;
+        n++;
         a = b;
         b = s;
         s = b + a;
     }
+    return n;
 }
 int detectaFibonacci(int p)
 {
-    int t = 0, u = 1, s;
+    int a = 0, b = 1, s = 0;
     for (int i = 0; i < 46; i++) // apos 46, s se torna maior do que o valor limite para int
     {
-        s = t + u;
-        t = u;
-        u = s;
+        a = b;
+        b = s;
+        s = b + a;
         if (s == p)
             return 1;
     }
