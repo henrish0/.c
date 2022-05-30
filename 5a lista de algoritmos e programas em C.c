@@ -17,7 +17,6 @@ int fibo(int p, int v[100])
         {
             v[i] = s;
             n++;
-            printf("\n%i", v[i]);
         }
         else
             return n;
