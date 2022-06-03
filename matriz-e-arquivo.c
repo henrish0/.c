@@ -23,7 +23,7 @@ main()
             ag = 2;
         else
             ag = 3;
-        if (gender = 'F')
+        if (gender == 'F')
             ge = 0;
         else
             ge = 1;
