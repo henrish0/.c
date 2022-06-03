@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 main(){
 FILE*pArquivo;
 pArquivo=fopen("lista.txt","r");
