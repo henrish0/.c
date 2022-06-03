@@ -1,7 +1,6 @@
 #include <stdio.h>
 main(){
-FILE*pArquivo;
-pArquivo = fopen("lista.txt","r");
+FILE*pArquivo=fopen("lista.txt","r");
 int ag,ge,im,age,weight,matrix[2][4][4]; float height,imc; char name[100],gender;
 for (int i=0;i<2;i++) for (int j=0;j<4;j++) for (int k=0;k<4;k++) matrix[i][j][k]=0;
 while(fscanf(pArquivo,"%s %i %c %f %i",&name,&age,&gender,&height,&weight)!= EOF){
