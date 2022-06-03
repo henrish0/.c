@@ -18,6 +18,7 @@ while(fscanf(pArquivo,"%s %i %c %f %i",&name,&age,&gender,&height,&weight)!= EOF
     else if(imc>=24&&imc<29)im=2;
     else if(imc>=29)im=3;
     matrix[ge][ag][im]++;}
-printf("\n\n\n Minha matriz\n\n");
-for(int i=0;i<2;i++)for(int j=0;j<4;j++)for(int k=0;k<4;k++)printf("\n (%i,%i,%i)= %i\n",i,j,k,matrix[i][j][k]);
-fclose(pArquivo);}
+//printf("\n\n\n Minha matriz\n\n");
+//for(int i=0;i<2;i++)for(int j=0;j<4;j++)for(int k=0;k<4;k++)printf("\n (%i,%i,%i)= %i",i,j,k,matrix[i][j][k]);
+fclose(pArquivo);
+}
