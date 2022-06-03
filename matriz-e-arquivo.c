@@ -13,7 +13,7 @@ main()
                 matrix[i][j][k] = 0;
     while (fscanf(pArquivo, "%s %i %c %f %i", &name, &age, &gender, &height, &weight) != EOF)
     {
-        imc = height / (weight * weight);
+        imc = weight / (height * height);
         printf("\n %s %i %c %.2f %i \n imc= %.2f", name, age, gender, height, weight, imc);
         if (age < 18)
             ag = 0;
