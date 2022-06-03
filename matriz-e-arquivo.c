@@ -15,8 +15,8 @@ while(fscanf(pArquivo,"%s %i %c %f %i",&name,&age,&gender,&height,&weight)!= EOF
     if(gender=='F')ge=0;
     else ge=1;
     if(imc<18.5)im=0;
-    else if(imc>=18.5 && imc<24)im=1;
-    else if(imc>=24 && imc<29)im=2;
+    else if(imc>=18.5&&imc<24)im=1;
+    else if(imc>=24&&imc<29)im=2;
     else if(imc>=29)im=3;
     matrix[ge][ag][im]++;}
 printf("\n\n\n Minha matriz\n\n");
