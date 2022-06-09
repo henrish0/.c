@@ -182,6 +182,7 @@ again:
             {
                 max = t;
                 t = rand() % (max - min - 1) + min + 1;
+            }
             else
             {
                 goto again;
